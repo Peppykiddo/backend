@@ -10,11 +10,11 @@ generator client {
 
 datasource db {
   provider = "mysql"
-  url      = env("DATABASE_URL")
+  url      = mysql://admin:admin123@database-1.ch6s4ciqm2ee.us-east-1.rds.amazonaws.com:3306/test-db
 }
 
 model Report {
-  id            Int      @id @default(autoincrement())
+  id            Integer     @id @default(autoincrement())
   fromDate      DateTime
   toDate        DateTime
   place         String
@@ -24,17 +24,17 @@ model Report {
 }
 
 model emd {
-  id               Int      @id @default(autoincrement())
+  id               Int        @id @default(autoincrement())
   Date             DateTime
-  VoucherType          String
+  VoucherType      String     @db.VarChar(255)
   Amount           Float
-  Type             String
-  URNNumber        String
-  StatusOfRefunded String
+  Type             String     @db.VarChar(255)
+  URNNumber        String     @db.VarChar(255)
+  StatusOfRefunded String     @db.VarChar(255)
   RefundedDate     DateTime
-  NPNumbers        String
-  PartyName        String
-  NameOfWork       String
-  Section          String
-  Remarks          String
+  NPNumbers        String     @db.VarChar(255)
+  PartyName        String     @db.LongText
+  NameOfWork       String     @db.LongText
+  Section          String     @db.VarChar(255)
+  Remarks          String     @db.VarChar(255)
 }
