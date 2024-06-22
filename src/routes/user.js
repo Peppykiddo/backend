@@ -79,7 +79,7 @@ router.post("/postData", async (req, res) => {
     });
   
     if(response){
-      res.status(60).json(response)
+      res.status(200).json(response)
     }else{
       res.status(500).json({msg:"internal server error"})
     }
