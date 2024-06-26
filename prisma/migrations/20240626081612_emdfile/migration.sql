@@ -1,16 +1,18 @@
 /*
   Warnings:
 
-  - You are about to drop the `EMD` table. If the table is not empty, all the data it contains will be lost.
+  - You are about to drop the `Report` table. If the table is not empty, all the data it contains will be lost.
 
 */
+-- DropTable
+DROP TABLE `Report`;
 
 -- CreateTable
 CREATE TABLE `emd` (
     `id` INTEGER NOT NULL AUTO_INCREMENT,
     `Date` DATETIME(3) NOT NULL,
     `VoucherType` VARCHAR(191) NOT NULL,
-    `Amount` DOUBLE NOT NULL,
+    `Amount` DOUBLE NULL DEFAULT 0.0,
     `Type` VARCHAR(191) NOT NULL,
     `URNNumber` VARCHAR(191) NOT NULL,
     `StatusOfRefunded` VARCHAR(191) NOT NULL,
