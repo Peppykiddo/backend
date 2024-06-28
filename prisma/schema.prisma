@@ -20,5 +20,5 @@ model emd {
   partyName        String    @db.LongText
   nameOfWork       String    @db.LongText
   section          String    @db.VarChar(255)
-  remarks          String    @db.VarChar(255)?
+  remarks          String    @db.VarChar(255)
 }
