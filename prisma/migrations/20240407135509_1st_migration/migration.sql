@@ -1,8 +1,8 @@
 -- CreateTable
 CREATE TABLE `Report` (
     `id` INTEGER NOT NULL AUTO_INCREMENT,
-    `fromDate` DATETIME(3) NOT NULL,
-    `toDate` DATETIME(3) NOT NULL,
+    `fromDate` DATETIME NOT NULL,
+    `toDate` DATETIME NOT NULL,
     `place` VARCHAR(191) NOT NULL,
     `material` VARCHAR(191) NOT NULL,
     `supplier` VARCHAR(191) NOT NULL,

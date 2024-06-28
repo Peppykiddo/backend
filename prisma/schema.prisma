@@ -11,8 +11,8 @@ model emd {
   id               Int      @id @default(autoincrement())
   Date             DateTime
   VoucherType      String   @db.VarChar(191)
-  Amount           Float    @default(0.0)
-  Type             String   @db.VarChar(191)  
+  Amount           Float?   @default(0.0)
+  Type             String   @db.VarChar(191)
   URNNumber        String   @db.VarChar(191)
   StatusOfRefunded String   @db.VarChar(191)
   RefundedDate     DateTime
