@@ -8,17 +8,17 @@ datasource db {
 }
 
 model emd {
-  id               Int      @id @default(autoincrement())
-  Date             DateTime
-  VoucherType      String   @db.VarChar(191)
-  Amount           Float?   @default(0.0)
-  Type             String   @db.VarChar(191)
-  URNNumber        String   @db.VarChar(191)
-  StatusOfRefunded String   @db.VarChar(191)
-  RefundedDate     DateTime
-  NPNumbers        String   @db.VarChar(191)
-  PartyName        String   @db.VarChar(191)
-  NameOfWork       String   @db.VarChar(191)
-  Section          String   @db.VarChar(191)
-  Remarks          String   @db.VarChar(191)
+  id               Int       @id @default(autoincrement())
+  date             DateTime
+  voucherType      String    @db.VarChar(255)
+  amount           Float?    @default(0.0)
+  type             String    @db.VarChar(255)
+  urnNumber        String    @db.VarChar(255)
+  statusOfRefunded String    @db.VarChar(255)
+  refundedDate     DateTime?
+  npNumbers        String    @db.VarChar(255)
+  partyName        String    @db.LongText
+  nameOfWork       String    @db.LongText
+  section          String    @db.VarChar(255)
+  remarks          String    @db.VarChar(255)?
 }
