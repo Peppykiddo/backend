@@ -4,7 +4,7 @@ generator client {
 
 datasource db {
   provider = "mysql"
-  url      = "mysql://admin:admin123@database-1.ch6s4ciqm2ee.us-east-1.rds.amazonaws.com:3306/test-db"
+  url      = "mysql://admin:hU9kJ5JMCcH1U0cP77j3@database-1.c3642s2cgdrl.us-east-1.rds.amazonaws.com:3306/emd_db"
 }
 
 model emd {
