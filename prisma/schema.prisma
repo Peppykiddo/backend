@@ -1,0 +1,64 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model Report {
+  id            Int      @id @default(autoincrement())
+  fromDate      DateTime
+  toDate        DateTime
+  place         String      @db.VarChar(255)
+  material      String      @db.VarChar(255)
+  supplier      String      @db.LongText
+  transporter   String      @db.LongText
+}
+
+model emd {
+  id                 Int      @id @default(autoincrement())
+  Date               DateTime
+  VoucherType        String     @db.VarChar(255)
+  Amount             Float
+  Type               String     @db.VarChar(255)
+  URNNumber          String     @db.VarChar(255)
+  StatusOfRefunded   String     @db.VarChar(255)
+  RefundedDate       DateTime
+  NPNumbers          String     @db.VarChar(255)
+  PartyName          String     @db.LongText
+  NameOfWork         String     @db.LongText
+  Section            String     @db.VarChar(255)
+  Remarks            String     @db.VarChar(255)
+}
+
+model FD {
+  id                Int      @id @default(autoincrement())
+  Date              DateTime
+  FDR_BG            String      @db.VarChar(255)
+  Particular        String      @db.LongText
+  Party_Name        String      @db.LongText
+  Name_of_Work      String      @db.LongText
+  Bank              String      @db.VarChar(255)
+  FD_Amount         Float
+  BG_Amount         Float
+  Refunded_Amount   Float
+  Status_of_Refund  String     @db.VarChar(255)
+  Date_of_Refund    DateTime
+  Bank_Issued_Date  DateTime
+  Date_of_Expiry    DateTime
+  FDR_Number        String      @db.VarChar(255)
+  BG_Number         String      @db.VarChar(255)
+  FD_present_Value  Float
+  FD_End_Value      Float
+  Section           String      @db.VarChar(255)
+  Remarks           String      @db.VarChar(255)
+  ROI               Float
+}
