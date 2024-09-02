@@ -74,6 +74,7 @@ fs.createReadStream('path/to/your/csv/file.csv')
   .on('end', () => {
     console.log('CSV file successfully processed');
   });
+<<<<<<< HEAD
 
   // Read data from CSV file and insert into FD database
 fs.createReadStream('path/to/your/csv/file.csv')
@@ -141,3 +142,5 @@ fs.createReadStream('path/to/your/csv/file.csv')
 .on('end', () => {
   console.log('CSV file successfully processed');
 });
+=======
+>>>>>>> 1b905ab20d6dea8b052090b3323db32c92ef7e43
